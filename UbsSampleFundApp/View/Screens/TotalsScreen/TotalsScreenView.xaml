@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="UbsSampleFundApp.View.Screens.TotalsScreen.TotalsScreenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UbsSampleFundApp.View.Screens.TotalsScreen"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" Width="434.296">
+    <Grid>
+        <DataGrid x:Name="dataGrid" Margin="0,31,0,0" AutoGenerateColumns="False" ItemsSource="{Binding Rows}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Scope" Binding="{Binding Scope}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Number"  Binding="{Binding Number}"/>
+                <DataGridTextColumn Header="Stock Weight"  Binding="{Binding StockWeight}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Market Value"  Binding="{Binding MarketValue}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label  Content="Totals (by type):" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" />
+    </Grid>
+</UserControl>

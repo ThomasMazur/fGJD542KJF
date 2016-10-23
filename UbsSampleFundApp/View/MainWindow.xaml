@@ -1,0 +1,26 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UbsSampleFundApp.View"
+        xmlns:Screens="clr-namespace:UbsSampleFundApp.View.Screens" xmlns:MenuScreen="clr-namespace:UbsSampleFundApp.View.Screens.MenuScreen" xmlns:TotalsScreen="clr-namespace:UbsSampleFundApp.View.Screens.TotalsScreen" x:Class="UbsSampleFundApp.View.MainWindow"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Stocks" Height="505.765" Width="967.386">
+    <Grid Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="323*" />
+            <ColumnDefinition Width="13" />
+            <ColumnDefinition Width="150*" />
+        </Grid.ColumnDefinitions>
+
+        <Screens:GridScreenView Margin="10,68,10,10" Width="Auto"/>
+
+        <MenuScreen:MenuScreenView HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="53" Width="740" Grid.ColumnSpan="3"/>
+
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Margin="6,0" />
+        <TotalsScreen:TotalsScreenView Margin="7,68,10,10" Width="Auto" Grid.Column="2"/>
+
+    </Grid>
+</Window>
